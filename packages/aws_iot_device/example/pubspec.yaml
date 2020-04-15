@@ -1,0 +1,19 @@
+name: aws_iot_device_example
+description: Demonstrates how to use the aws_iot_device plugin.
+publish_to: "none"
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  aws_iot_device:
+    path: ../
+
+flutter:
+  uses-material-design: true
