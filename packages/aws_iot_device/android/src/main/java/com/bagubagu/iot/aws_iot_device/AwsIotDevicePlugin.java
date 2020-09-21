@@ -200,7 +200,7 @@ public class AwsIotDevicePlugin implements MethodCallHandler {
 
     try {
       initMqttManager(thingName, endpoint);
-      mqttManager.disconnect();
+
       mqttManager.connect(clientKeyStore, new AWSIotMqttClientStatusCallback() {
         @Override
         public void onStatusChanged(AWSIotMqttClientStatus status, Throwable throwable) {
@@ -254,7 +254,6 @@ public class AwsIotDevicePlugin implements MethodCallHandler {
   private void connect(MethodCall call, Result result) {
     try {
        Log.d(TAG, "client key store: " + clientKeyStore);
-      mqttManager.disconnect();
       mqttManager.connect(clientKeyStore, new AWSIotMqttClientStatusCallback() {
 
 
